@@ -21,6 +21,7 @@ pip install -r requirements.txt
 .\.venv\Scripts\Activate.ps1
 # 1) 注册设备 (返回用于小程序配对的 pairing_code )
 curl -X POST http://127.0.0.1:5000/api/devices/register -H "Content-Type: application/json" -d "{\"device_id\":\"DEV-001\"}"
+curl -X POST http://100.72.153.84:5000/api/devices/register -H "Content-Type: application/json" -d "{\"device_id\":\"DEV-001\"}"
 
 # 2) 为该设备发送 IMU 数据帧
 python send_mock_frames.py --device-id DEV-001 --rows-per-frame 50
